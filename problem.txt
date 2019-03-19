@@ -24,3 +24,4 @@ Task	Understanding Windturbine validation process		19.6	DevOps Team	18/3/2019	29
 User Story	 UI Deployment in Alpine Contianer 	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
 Task	 - Create alpine container to deploy the UI code	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
 
+
