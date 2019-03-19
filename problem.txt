@@ -1,11 +1,4 @@
 --------How-to setup a simple git push deployment-------------
 How are you 
 
-User Story	Development Environment CI/CV - Setup 	Shaul	19.7	DevOps Team	01/04/2019	12/02/2019
-Task	- Jekins file to Dev Environment	Shaul	19.7	DevOps Team	01/04/2019	12/02/2019
-Task	- GitHub structure change for dev-env	Shaul	19.7	DevOps Team	01/04/2019	12/02/2019
-						
-User Story	Eco -Adaptive PIL Setup 	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
-Task	- Container create for eco-app	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
-Task	- Both Application Validation 	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
 
