@@ -24,4 +24,10 @@ Task	Understanding Windturbine validation process		19.6	DevOps Team	18/3/2019	29
 User Story	 UI Deployment in Alpine Contianer 	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
 Task	 - Create alpine container to deploy the UI code	Shaul	19.6	DevOps Team	18/3/2019	29/3/2019
 
+FROM registry.gear.ge.com/predixmachine/openjdk-jre-x86_64
+RUN apt-get install -y tomcat8
+ADD edge-app-ui/* /var/lib/tomcat/webapps/
+EXPOSE 3000
+
+
 
