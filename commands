@@ -1,0 +1,19 @@
+Step 0 – Install the pre-requisites
+Node.js gets installed from the NodeSource repository which requires the EPEL repository
+sudo yum -y install epel-release
+As we’ll be using npm to install angular CLI, it requires few build tools to compile and install packages
+sudo yum -y install gcc c++ make
+
+
+Step 1 – Install Node.js
+Option 1: Install Node.js using yum
+sudo yum -y install nodejs
+Checking the versions
+nodejs-yum
+Option 2: Install latest Node.js
+In my case Node.js v6 got installed which is the LTS (Long Term Support). Currently the latest available node.js is v9, and latest LTS is node.js v8. if you have recently run the ‘yum update’ you may get the node.js v8 installed. For installing the latest node.js v9, use the following steps – can remove the previously installed node.js using ‘sudo yum -y remove nodejs’.
+Add the NodeSource repository for the version you want to install i.e. Node.js v9.x
+curl -sL https://rpm.nodesource.com/setup_9.x | sudo -E bash -
+Install node.js
+sudo yum -y install nodejs
+Verification
