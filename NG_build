@@ -1,3 +1,15 @@
 https://coursetro.com/posts/code/64/How-to-Deploy-an-Angular-App-(Angular-4)
 node: /usr/bin/node /usr/local/bin/node /usr/share/node /usr/local/nodejs-binary-6.3.0/bin/node /usr/share/man/man1/node.1.gz
 ln -s /usr/bin/node /usr/local/bin/node  (Run this command)
+
+
+[predix@predix-devbox Documents]$ ln -s /usr/bin/node /usr/local/bin/node 
+
+ln: failed to create symbolic link ‘/usr/local/bin/node/node’: Permission denied
+
+[predix@predix-devbox Documents]$ sudo ln -s /usr/bin/node /usr/local/bin/node 
+
+[predix@predix-devbox Documents]$ node -version
+
+bash: /usr/local/bin/node: Is a directory
+
