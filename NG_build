@@ -13,3 +13,4 @@ ln: failed to create symbolic link ‘/usr/local/bin/node/node’: Permission de
 
 bash: /usr/local/bin/node: Is a directory
 
+ln -s /usr/bin/node /usr/local/nodejs-binary-6.3.0/bin/node (try this)
