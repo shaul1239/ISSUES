@@ -78,5 +78,22 @@ ADD ./ren-appInfra-0.0.1-SNAPSHOT.jar /app/ren-appInfra-0.0.1-SNAPSHOT.jar
 COPY start_eco.sh .
 
 CMD ["/bin/sh", "/start_eco.sh"]
+HOLI
 
+FROM
+
+switch to our app directory
+
+ENV http_proxy=http://proxy.jfwtc.ge.com:8080
+ENV https_proxy=http://proxy.jfwtc.ge.com:8080
+
+MAINTAINER "SHAUL"
+RUN apk update && apk add sudo && mkdir /usr/var/
+WORKDIR /usr/var/
+RUN apk add openjdk7
+RUN apk add wget && wget http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.17/bin/apache-tomcat-9.0.17.tar.gz
+EXPOSE 8080
+RUN  tar xvzf apache-tomcat-9.0.17.tar.gz
+ADD 
+ENTRYPOINT cd /usr/var/apache-tomcat-9.0.17/bin/ && sh catalina.sh start &&./startup.sh && sh
 
