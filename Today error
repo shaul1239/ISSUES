@@ -1,0 +1,22 @@
+Step 6/11 : RUN npm install -g @angular/cli
+ ---> Using cache
+ ---> e3f5a6e4274c
+Step 7/11 : EXPOSE 3000
+ ---> Using cache
+ ---> 832b5561f2e3
+Step 8/11 : RUN mkdir -p /opt/ng_build/edgeapp
+ ---> Using cache
+ ---> c0fbd5c08876
+Step 9/11 : COPY angular-cli-8.0.0-beta.7 /* /opt/ng_build/edgeapp/
+
+
+
+
+ ---> 03785c152036
+Step 10/11 : WORKDIR /opt/ng_build/edgeapp
+ ---> Running in f1d8f304b118
+Removing intermediate container f1d8f304b118
+ ---> 2c1906eb2cac
+Step 11/11 : RUN ng build edgeapp
+ ---> Running in 620069b53b6e
+The build command requires to be run in an Angular project, but a project definition could not be found.
