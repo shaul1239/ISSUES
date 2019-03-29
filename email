@@ -1,0 +1,11 @@
+Team,
+
+so far I can able to build and deploy edgeapp ui project manually from my linux dev box. I have ran into some compiling issue while building
+but I solved with slight changes.
+
+As i am new to envionment it took some time to reach here. I will automate build and deploy process with docker very soon. 
+
+Attaching you the output after deploying to tomcat in tomcat.
+
+Thanks,
+Shaul
