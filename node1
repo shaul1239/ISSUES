@@ -1,0 +1,6 @@
++ webpack-dev-server@3.2.1
++ rimraf@2.6.3
++ @angular/cli@7.3.7
++ webpack@4.29.6
++ typescript@3.4.1
++ node-gyp@3.8.0
