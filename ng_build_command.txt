@@ -1,0 +1,7 @@
+we need to add below line in docker file before RUN ng build
+
+RUN ng update @angular/cli --migrate-only --from=1.7.3
+
+
+
+Ref: https://stackoverflow.com/questions/53096996/angular-cli-error-the-serve-command-requires-to-be-run-in-an-angular-project-b
