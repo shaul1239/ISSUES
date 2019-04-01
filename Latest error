@@ -1,0 +1,27 @@
+Removing intermediate container 26a50fb01eba
+ ---> 92963ecf6a6f
+Step 8/11 : COPY edge-app-ui /opt/ng_build/edgeapp
+ ---> 09272ef7bf5a
+Step 9/11 : WORKDIR /opt/ng_build/edgeapp/
+ ---> Running in b1ee7578559d
+Removing intermediate container b1ee7578559d
+ ---> 4066f8010f9a
+Step 10/11 : RUN ng build --prod
+ ---> Running in f9c6e19256a5
+
+
+
+Could not find module "@angular-devkit/build-angular" from "/opt/ng_build/edgeapp".
+Error: Could not find module "@angular-devkit/build-angular" from "/opt/ng_build/edgeapp".
+    at Object.resolve (/usr/local/lib/node_modules/@angular/cli/node_modules/@angular-devkit/core/node/resolve.js:141:11)
+    at Observable.rxjs_1.Observable [as _subscribe] (/usr/local/lib/node_modules/@angular/cli/node_modules/@angular-devkit/architect/src/architect-legacy.js:153:40)
+    at Observable._trySubscribe (/usr/local/lib/node_modules/@angular/cli/node_modules/rxjs/internal/Observable.js:44:25)
+    at Observable.subscribe (/usr/local/lib/node_modules/@angular/cli/node_modules/rxjs/internal/Observable.js:30:22)
+    at /usr/local/lib/node_modules/@angular/cli/node_modules/rxjs/internal/Observable.js:99:19
+    at new Promise (<anonymous>)
+    at Observable.toPromise (/usr/local/lib/node_modules/@angular/cli/node_modules/rxjs/internal/Observable.js:97:16)
+    at BuildCommand.initialize (/usr/local/lib/node_modules/@angular/cli/models/architect-command.js:130:86)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:745:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:743:3)
