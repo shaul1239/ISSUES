@@ -22,8 +22,9 @@ COPY edge-app-ui /opt/ng_build/edgeapp
 
 #working directory
 WORKDIR /opt/ng_build/edgeapp/
-    
+
+RUN ng update --all --force
 #RUN ng build --prod --base-href /edgeapp/
-RUN ng build --prod
+RUN ng build
     
-RUN rm /opt/ng_build/edgeapp/package-lock.json
+#RUN rm /opt/ng_build/edgeapp/package-lock.json
