@@ -25,3 +25,9 @@ The build command requires to be run in an Angular project, but a project defini
 
 docker: Error response from daemon: pull access denied for edgeapp/bin/bash, repository does not exist or may require 'docker login'.
 See 'docker run --help'.
+
+--------------------------------------------------------------------------
+Step 5/12 : RUN apk update RUN apk add --update alpine-sdk RUN apk del alpine-sdk RUN apk rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm RUN apk add --update nodejs nodejs-npm
+ ---> Running in 6df37516428a
+/bin/sh: 1: apk: not found
+The command '/bin/sh -c apk update RUN apk add --update alpine-sdk RUN apk del alpine-sdk RUN apk rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm RUN apk add --update nodejs nodejs-npm' returned a non-zero code: 127
