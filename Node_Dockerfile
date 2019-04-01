@@ -1,0 +1,41 @@
+Dockerfile
+
+FROM registry.gear.ge.com/predixmachine/openjdk-jre-x86_64
+FROM node:10.15.2
+
+# setting up proxy
+ENV http_proxy=http://PITC-Zscaler-ASPAC-Bangalore3PR.proxy.corporate.ge.com:80/
+ENV https_proxy=http://PITC-Zscaler-ASPAC-Bangalore3PR.proxy.corporate.ge.com:80/
+
+
+RUN apk update \
+RUN apk add --update alpine-sdk \
+RUN apk del alpine-sdk \
+RUN apk rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm \
+RUN apk add --update nodejs nodejs-npm
+RUN apk add npm
+
+#installing ng build
+RUN npm install -g @angular/cli
+
+EXPOSE 3000 
+
+# make a directory 
+RUN mkdir -p /opt/ng_build/edgeapp
+      
+#copy project
+COPY . /opt/ng_build/edgeapp/
+    
+#working directory
+WORKDIR /opt/ng_build/edgeapp
+    
+#RUN ng build edgeapp
+RUN ng build /opt/ng_build/edgeapp  
+
+-----------------------------------------------------
+Step 5/12 : RUN apk update RUN apk add --update alpine-sdk RUN apk del alpine-sdk RUN apk rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm RUN apk add --update nodejs nodejs-npm
+ ---> Running in 6df37516428a
+/bin/sh: 1: apk: not found
+The command '/bin/sh -c apk update RUN apk add --update alpine-sdk RUN apk del alpine-sdk RUN apk rm -rf /tmp/* /var/cache/apk/* *.tar.gz ~/.npm RUN apk add --update nodejs nodejs-npm' returned a non-zero code: 127
+
+    
