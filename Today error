@@ -20,3 +20,8 @@ Removing intermediate container f1d8f304b118
 Step 11/11 : RUN ng build edgeapp
  ---> Running in 620069b53b6e
 The build command requires to be run in an Angular project, but a project definition could not be found.
+
+
+
+docker: Error response from daemon: pull access denied for edgeapp/bin/bash, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
