@@ -1,0 +1,29 @@
+FROM registry.gear.ge.com/predixmachine/openjdk-jre-x86_64
+FROM node:10.15.2
+
+# setting up proxy
+ENV http_proxy=http://PITC-Zscaler-ASPAC-Bangalore3PR.proxy.corporate.ge.com:80/
+ENV https_proxy=http://PITC-Zscaler-ASPAC-Bangalore3PR.proxy.corporate.ge.com:80/
+
+
+
+#installing ng build
+RUN set -xe \
+   && npm install --unsafe-perm -g node-gyp webpack-dev-server rimraf webpack typescript @angular/cli \
+    && rm -rf /var/cache/apk/* /tmp/*
+
+EXPOSE 3000 
+
+# make a directory
+RUN mkdir -p /opt/ng_build/edgeapp
+
+#copy project
+COPY edge-app-ui /opt/ng_build/edgeapp
+
+#working directory
+WORKDIR /opt/ng_build/edgeapp/
+    
+#RUN ng build --prod --base-href /edgeapp/
+RUN ng build --prod
+    
+RUN rm /opt/ng_build/edgeapp/package-lock.json
