@@ -1,0 +1,19 @@
+Hi Karthik,
+
+ 
+
+I successfully Deploy edge app UI to Tomcat.
+
+ 
+
+I followed the below steps
+
+ 
+
+Build the edge app application using  ng build command
+If Build  is Successful It creates dist folder
+Copy that dist folder in Tomcat (webapps folder)
+write a Dockerfile for container deployment 
+
+ 
+ 
