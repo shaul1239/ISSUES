@@ -8,12 +8,30 @@ I successfully Deploy edge app UI to Tomcat.
 
 I followed the below steps
 
- 
-
 Build the edge app application using  ng build command
 If Build  is Successful It creates dist folder
 Copy that dist folder in Tomcat (webapps folder)
 write a Dockerfile for container deployment 
+
+
+--------------------------
+
+FROM registry.gear.ge.com/predixmachine/openjdk-jre-x86_64
+
+ #setting up proxy
+ ENV http_proxy=http://PITC-Zscaler-ASPAC-Bangalore3PR.proxy.corporate.ge.com:80/
+ ENV https_proxy=http://PITC-Zscaler-ASPAC-Bangalore3PR.proxy.corporate.ge.com:80/
+
+
+COPY apache-tomcat-8.5.39.tar.gz /
+RUN tar -xvf apache-tomcat-8.5.39.tar.gz
+ADD /edge-app-ui/dist/* /apache-tomcat-8.5.39/webapps/edge-app-ui/
+
+
+
+
+EXPOSE 3000
+ENTRYPOINT /apache-tomcat-8.5.39/bin/startup.sh && sh
 
  
  
