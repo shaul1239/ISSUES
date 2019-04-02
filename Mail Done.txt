@@ -1,0 +1,24 @@
+Good Evening Karthik,
+
+I can able to deploy edge app UI  project in Tomcat succesfully.
+
+These are the steps that I foloowed for deployment process,
+
+step1: I built edgeapp project using ngbuild locally.After building is done, I can able to see dist folder.
+step2: I have built a docker file which can able to copy this dist folder to tomcat webapps folder.
+step3: After copying dist folder to webapp, tomcat starts automatically with port 3000
+       path of project and tomcat is as follows /edge-app-ui/dist/* /apache-tomcat-8.5.39/webapps/edge-app-ui/
+       
+       
+If you want me to work with your team to get this deployment process up and running i can work with them to get it up and running.
+
+Thank you,
+Shaul
+
+
+
+ 
+
+
+ 
+ 
